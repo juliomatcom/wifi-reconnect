@@ -1,0 +1,26 @@
+{
+  "name": "wifi-reconnect",
+  "version": "1.0.0",
+  "description": "Connect and reconnect if n packages were lost",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wifi",
+    "wireless",
+    "connection",
+    "reconnect"
+  ],
+  "author": "juliomatcom",
+  "license": "MIT",
+  "dependencies": {
+    "meow": "^3.7.0",
+    "tcp-ping": "^0.1.1",
+    "wifi-control": "^2.0.0",
+    "wireless-tools": "^0.19.0"
+  },
+  "bin" : {
+    "wifi-reconnect" : "./cli.js"
+  }
+}
