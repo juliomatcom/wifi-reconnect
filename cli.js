@@ -14,7 +14,7 @@ const cli = meow(`
       --help          Display this help
 
     Example
-      $ wifi-reconnect livingRoom -p passwordHere
+      $ wifi-reconnect livingRoomWifi -p passwordHere
 `, {
     alias: {
         p: 'password',
