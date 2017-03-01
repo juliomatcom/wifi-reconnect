@@ -4,7 +4,8 @@ const meow = require('meow')
 const ifconfig = require('wireless-tools/ifconfig')
 const getWirelessInterface = require('./lib/util.js').getWirelessInterface
 
-const cli = meow(`
+const cli = meow(
+`
     Usage
       $ wifi-reconnect <SSID>
 
@@ -16,12 +17,11 @@ const cli = meow(`
     Example
       $ wifi-reconnect livingRoomWifi -p passwordHere
 `, {
-    alias: {
-        p: 'password',
-        s: 'seconds'
-    }
+  alias: {
+    p: 'password',
+    s: 'seconds'
+  }
 })
-
 
 const opts = {
   essid: cli.input[0],
@@ -42,7 +42,7 @@ if (opts.essid) {
 
 function getInterfaces () {
   return new Promise(function (resolve, reject) {
-    ifconfig.status(function(err, status) {
+    ifconfig.status(function (err, status) {
       if (err) {
         reject(err)
       }
