@@ -4,7 +4,7 @@
   "description": "Connect and reconnect if n packages were lost",
   "main": "cli.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/standard && node_modules/.bin/_mocha test/unit.js"
   },
   "keywords": [
     "wifi",
@@ -20,7 +20,11 @@
     "wifi-control": "^2.0.0",
     "wireless-tools": "^0.19.0"
   },
-  "bin" : {
-    "wifi-reconnect" : "./cli.js"
+  "bin": {
+    "wifi-reconnect": "./cli.js"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "pre-commit": "^1.2.2"
   }
 }
