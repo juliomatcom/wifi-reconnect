@@ -5,14 +5,16 @@
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](http://standardjs.com/)
 
 ### Why ?
-Because [Vodafone's](https://www.google.es/url?sa=t&rct=j&q=&esrc=s&source=web&cd=29&cad=rja&uact=8&ved=0ahUKEwiFx4PR7LrSAhVBWhoKHbd2Bb0Q-TAIgAIoADAc&url=http%3A%2F%2Fwww.vodafone.com%2F&usg=AFQjCNHQlwH-hCrMCRE-SFgSnl6pKSMrcw&sig2=3H4bpNhBmg7QIDCaD9YFag) APs are 💩💩💩 and I got tired to restart by hand my wireless connection 😤
+Because [Vodafone's](http://www.vodafone.com/) APs are 💩💩💩 and I got tired to restart by hand my wireless connection 😤
 
+## Install
+`$ npm i wifi-reconnect -g`
 ## Usage
-`$ node cli.js --help`
+`$ wifi-reconnect --help`
 
 ```
 Usage
-  $ node cli.js <SSID>
+  $ wifi-reconnect <SSID>
 
 Options
   --password, -p  Access password
