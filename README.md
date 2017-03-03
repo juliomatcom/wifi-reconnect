@@ -13,6 +13,8 @@ Because [Vodafone's](http://www.vodafone.com/) APs are 💩💩💩 and I got ti
 ## Usage
 `$ wifi-reconnect <SSID> -p <password>`   
 
+![gif](example.gif)   
+
 Once connected to `SSID` **it will monitor and reconnect your connection** every time you loose connectivity with host (`ping` default: google.com) in more than *n* attempts (default: 30).  
 
 ```
