@@ -1,6 +1,6 @@
 {
   "name": "wifi-reconnect",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Connect or reconnect your Wifi if your connection dies",
   "main": "cli.js",
   "scripts": {
