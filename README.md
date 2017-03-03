@@ -1,5 +1,5 @@
-# wifi-reconnect :: WIP
-📡 Connect or reconnect your Wifi if your connection dies
+# 📡 wifi-reconnect
+Connect or reconnect your Wifi if your connection dies
 
 [![Build Status](https://travis-ci.org/juliomatcom/wifi-reconnect.svg?branch=master)](https://travis-ci.org/juliomatcom/wifi-reconnect)
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](http://standardjs.com/)
