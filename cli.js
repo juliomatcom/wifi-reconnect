@@ -2,7 +2,11 @@
 'use strict'
 const meow = require('meow')
 const ifconfig = require('wireless-tools/ifconfig')
+const chalk = require('chalk')
+const log = console.log
+const error = str => log(chalk.red(str))
 const getWirelessInterface = require('./lib/util.js').getWirelessInterface
+const logo = '📡 wifi-reconnect'
 
 const cli = meow(
 `
@@ -11,7 +15,8 @@ const cli = meow(
 
     Options
       --password, -p  Access password
-      --seconds, -s   Max seconds with package lost allowed
+      --attempts, -a  Max attempts with package lost allowed
+      --host, -h     Set host to test against
       --help          Display this help
 
     Example
@@ -19,25 +24,28 @@ const cli = meow(
 `, {
   alias: {
     p: 'password',
-    s: 'seconds'
+    a: 'attempts',
+    h: 'host'
   }
 })
 
 const opts = {
   essid: cli.input[0],
+  host: cli.flags.host,
   password: cli.flags.password || undefined,
-  seconds: cli.flags.seconds
+  attempts: cli.flags.attempts
 }
 
 if (opts.essid) {
+  log(chalk.bold(logo))
   const monitoring = require('./lib/monitor')(opts)
 
   getInterfaces()
     .then(getWirelessInterface)
     .then(monitoring)
-    .catch(console.log)
+    .catch(error)
 } else {
-  console.log('Please provide a valid SSID to connect with, more info in --help')
+  log('Please provide a valid SSID to connect with, more info in --help')
 }
 
 function getInterfaces () {
