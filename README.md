@@ -8,13 +8,15 @@ Connect or reconnect your Wifi if your connection dies
 Because [Vodafone's](http://www.vodafone.com/) APs are 💩💩💩 and I got tired to restart by hand my wireless connection 😤
 
 ## Install
-`$ npm i wifi-reconnect -g`
+`$ npm install wifi-reconnect -g`
+
 ## Usage
-`$ wifi-reconnect --help`
+`$ wifi-reconnect <SSID> -p <password>`   
+
+Once connected to `SSID` **it will monitor and reconnect your connection** every time you loose connectivity with host (`ping` default: google.com) in more than *n* attempts (default: 30).  
 
 ```
-Usage
-  $ wifi-reconnect <SSID>
+$ wifi-reconnect --help
 
 Options
   --password, -p  Access password
